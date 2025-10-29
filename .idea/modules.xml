@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Kafka-microservices.iml" filepath="$PROJECT_DIR$/.idea/Kafka-microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Notifications-srvice/Notifications-srvice.iml" filepath="$PROJECT_DIR$/Notifications-srvice/Notifications-srvice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Order-srvice/Order-srvice.iml" filepath="$PROJECT_DIR$/Order-srvice/Order-srvice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Payment-srvice/Payment-srvice.iml" filepath="$PROJECT_DIR$/Payment-srvice/Payment-srvice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Shipping-srvice/Shipping-srvice.iml" filepath="$PROJECT_DIR$/Shipping-srvice/Shipping-srvice.iml" />
+    </modules>
+  </component>
+</project>

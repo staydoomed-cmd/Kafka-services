@@ -1,7 +1,6 @@
 package com.example.Payment_srvice.config;
 
 
-
 import com.example.Payment_srvice.model.dto.OrderCreatedEvent;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

@@ -14,8 +14,8 @@ import java.util.Random;
 public class OrderKafkaProducer {
     private final KafkaTemplate<String, OrderCreatedEvent> kafkaTemplate;
 
-    public void sendOrderToKafka(OrderCreatedEvent orderCreatedEvent){
-        kafkaTemplate.send("new_orders", orderCreatedEvent.getOrderId().toString(),orderCreatedEvent);
-        log.info("Order with id {} sent to new_orders",orderCreatedEvent.getOrderId());
+    public void sendOrderToKafka(OrderCreatedEvent orderCreatedEvent) {
+        kafkaTemplate.send("new_orders", orderCreatedEvent.getOrderId().toString(), orderCreatedEvent);
+        log.info("Order with id {} sent to new_orders", orderCreatedEvent.getOrderId());
     }
 }

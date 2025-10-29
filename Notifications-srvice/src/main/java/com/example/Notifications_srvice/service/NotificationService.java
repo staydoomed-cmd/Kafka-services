@@ -13,12 +13,9 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class NotificationService {
 
-
-
     @KafkaListener(topics = "sent_orders", groupId = "notification_group", containerFactory = "kafkaListenerContainerFactory")
     public void consumePaymentEvent(OrderShippedEvent event) {
-    log.info("Notification about order with id {} and product {} sent",event.getOrderId(),event.getProduct());
-
+        log.info("Notification about order with id {} and product {} sent", event.getOrderId(), event.getProduct());
 
     }
 }

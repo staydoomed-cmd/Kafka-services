@@ -21,6 +21,7 @@ public class KafkaProducerConfig {
 
         return new org.springframework.kafka.core.DefaultKafkaProducerFactory<>(configurationProperties);
     }
+
     @Bean
     public KafkaTemplate<String, OrderCreatedEvent> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());

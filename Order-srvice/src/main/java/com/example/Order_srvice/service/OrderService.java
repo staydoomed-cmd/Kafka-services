@@ -20,8 +20,6 @@ public class OrderService {
     private final OrderKafkaProducer orderKafkaProducer;
 
 
-
-
     public OrderResponseDTO createOrder(OrderRequestDTO dto) {
         Order order = new Order();
         order.setProduct(dto.getProduct());
@@ -29,7 +27,7 @@ public class OrderService {
         order.setStatus("NEW");
 
         Order saved = orderRepository.save(order);
-        log.info("New order saved with product {}, quantity{}", order.getProduct(),order.getQuantity());
+        log.info("New order saved with product {}, quantity{}", order.getProduct(), order.getQuantity());
         OrderCreatedEvent event = mapToEvent(saved);
         orderKafkaProducer.sendOrderToKafka(event);
         return mapToDTO(saved);
@@ -58,6 +56,7 @@ public class OrderService {
         dto.setStatus(order.getStatus());
         return dto;
     }
+
     private OrderCreatedEvent mapToEvent(Order order) {
         OrderCreatedEvent event = new OrderCreatedEvent();
         event.setOrderId(order.getId());
